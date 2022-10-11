@@ -33,11 +33,18 @@ public class Computer {
         @Column
         private String serialTag;
 
-        //TODO agregar tipo de dato para trabajar con imagen tipo blob
+        //TODO agregar tipo de datos para trabajar con tipo de datos de imagen blob
 
         @OneToOne
         private Business business;
 
         @OneToOne
         private Software software;
+
+        @OneToMany
+
+        private Hardware hardware;
+
+        @OneToMany
+        private Changes changes;
 }

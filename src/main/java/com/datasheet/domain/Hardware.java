@@ -15,16 +15,19 @@ import java.util.UUID;
 @Setter
 @Entity
 
-@Table(name = "Business")
+@Table(name = "Hardware")
 
-public class Business {
+public class Hardware {
     @Id
     private UUID id;
 
-    @Column
-    private String name;
+    @OneToMany
+    private CPU cpu;
 
-    //TODO agregar tipo de dato para trabajar con tipo de datos imagen
+    @OneToMany
+    private RAM ram;
 
+    @OneToMany
+    private Storage storage;
 
 }
